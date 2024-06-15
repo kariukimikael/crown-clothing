@@ -1,9 +1,19 @@
-import Homepage from "./Homepage";
+
+import Directory from './Directory/Directory';
+import MenuItems from './MenuItems/MenuItems';
+
+
+
+
+
+
+
 
 
 
 
 
 export {
-    Homepage
+    Directory,
+    MenuItems,
 }
