@@ -1,5 +1,6 @@
 import Homepage from "./Homepage/Homepage";
 import Shop from "./Shop/Shop";
+import RegisterLogin from "./RegisterLogin/RegisterLogin";
 
 
 
@@ -8,5 +9,6 @@ import Shop from "./Shop/Shop";
 
 export {
     Homepage,
-    Shop
+    Shop,
+    RegisterLogin
 }
