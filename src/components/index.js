@@ -1,6 +1,6 @@
 
-import Directory from './Directory/Directory';
-import MenuItems from './MenuItems/MenuItems';
+import Directory from './directory/Directory';
+import MenuItems from './menu-items/MenuItems';
 
 
 
@@ -15,5 +15,5 @@ import MenuItems from './MenuItems/MenuItems';
 
 export {
     Directory,
-    MenuItems,
+    MenuItems
 }
