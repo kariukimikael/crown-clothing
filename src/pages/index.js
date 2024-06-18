@@ -1,4 +1,5 @@
 import Homepage from "./Homepage/Homepage";
+import Shop from "./Shop/Shop";
 
 
 
@@ -6,5 +7,6 @@ import Homepage from "./Homepage/Homepage";
 
 
 export {
-    Homepage
+    Homepage,
+    Shop
 }
