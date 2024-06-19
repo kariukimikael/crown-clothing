@@ -2,7 +2,8 @@ import React from 'react'
 import './Login.scss'
 import FormInput from '../form-input/FormInput'
 import CustomButton from '../custom-button/CustomButton'
-import signInWithGoogle from '../../firebase/firebase.utils'
+import { auth, signInWithGoogle } from '../../firebase/firebase.utils';
+import { signInWithEmailAndPassword } from 'firebase/auth'
 
 class Login extends React.Component {
   constructor(props) {
@@ -13,17 +14,27 @@ class Login extends React.Component {
       password: '',
     }
   }
-  handleSubmit = (e) => {
+  handleSubmit = async (e) => {
     e.preventDefault()
 
-    this.setState({ email: '', password: '' })
+
+    const { email, password } = this.state;
+    
+    try{
+      signInWithEmailAndPassword(auth, email, password);
+      this.setState({ email: '', password: '' })
+    } catch(error){
+      console.log(error);
+    }
   }
+
   handleChange = (e) => {
     const { value, name } = e.target
 
     this.setState({ [name]: value })
   }
   render() {
+    const { email, password } = this.state;
     return (
       <div className="sign-in">
         <h2>I already have an account</h2>
@@ -33,17 +44,17 @@ class Login extends React.Component {
           <FormInput
             type="email"
             name="email"
-            value={this.state.email}
+            value={email}
             handleChange={this.handleChange}
-            label="email"
+            label="Email"
             required
           />
           <FormInput
             type="password"
-            name="email"
-            value={this.state.password}
+            name="password"
+            value={password}
             handleChange={this.handleChange}
-            label="password"
+            label="Password"
             required
           />
           <div className="buttons">
