@@ -1,8 +1,8 @@
-import React from 'react';
-import './Login.scss';
-import FormInput from '../form-input/FormInput';
-import CustomButton from '../custom-button/CustomButton';
-import signInWithGoogle from '../../firebase/firebase.utils';
+import React from 'react'
+import './Login.scss'
+import FormInput from '../form-input/FormInput'
+import CustomButton from '../custom-button/CustomButton'
+import signInWithGoogle from '../../firebase/firebase.utils'
 
 class Login extends React.Component {
   constructor(props) {
@@ -19,7 +19,7 @@ class Login extends React.Component {
     this.setState({ email: '', password: '' })
   }
   handleChange = (e) => {
-    const { value, name } = e.target;
+    const { value, name } = e.target
 
     this.setState({ [name]: value })
   }
@@ -49,8 +49,7 @@ class Login extends React.Component {
           <div className="buttons">
             <CustomButton type="submit">Sign in</CustomButton>
             <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
-              {' '}
-              Sign in with Google{' '}
+              Sign in with Google
             </CustomButton>
           </div>
         </form>
@@ -59,4 +58,4 @@ class Login extends React.Component {
   }
 }
 
-export default Login;
+export default Login

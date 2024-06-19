@@ -3,7 +3,7 @@ import './Directory.scss'
 import { MenuItems } from '../index'
 
 class Directory extends React.Component {
-    constructor(props) {
+  constructor(props) {
     super(props)
 
     this.state = {
@@ -42,18 +42,16 @@ class Directory extends React.Component {
         },
       ],
     }
-    }
-    render() {
+  }
+  render() {
     return (
-        <div className="directory-menu">
+      <div className="directory-menu">
         {this.state.sections.map(({ id, ...sectionProps }) => {
-            return (
-            <MenuItems key={id} { ...sectionProps } />
-            )
+          return <MenuItems key={id} {...sectionProps} />
         })}
-        </div>
+      </div>
     )
-    }
+  }
 }
 
 export default Directory

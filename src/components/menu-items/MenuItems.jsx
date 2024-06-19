@@ -1,10 +1,10 @@
-import React from 'react';
-import './MenuItems.scss';
+import React from 'react'
+import './MenuItems.scss'
 import { useNavigate } from 'react-router-dom'
 
 const MenuItems = ({ title, imageUrl, size, linkUrl }) => {
   const navigate = useNavigate()
-  const handleClick = () =>{
+  const handleClick = () => {
     navigate(`${linkUrl}`)
   }
   return (
@@ -21,4 +21,4 @@ const MenuItems = ({ title, imageUrl, size, linkUrl }) => {
   )
 }
 
-export default MenuItems;
+export default MenuItems

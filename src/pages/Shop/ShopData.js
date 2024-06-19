@@ -244,6 +244,6 @@ const ShopData = [
       },
     ],
   },
-];
+]
 
-export default ShopData;
+export default ShopData
