@@ -3,7 +3,7 @@ import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
 import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore'
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyD4dRtsCws74c3l2ZBBLs683MGZhh7Y2Ck',
+  apiKey: 'Get Your Own API Key',
   authDomain: 'crown-clothing-km17.firebaseapp.com',
   projectId: 'crown-clothing-km17',
   storageBucket: 'crown-clothing-km17.appspot.com',
